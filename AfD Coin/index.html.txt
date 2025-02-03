@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krypto Coin - Startseite</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Willkommen zu [Dein Coin Name]</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="about.html">Über uns</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Was ist [Dein Coin Name]?</h2>
+            <p>[Dein Coin Name] ist die Zukunft der Kryptowährung. Schnell, sicher und dezentralisiert.</p>
+        </section>
+        <section>
+            <h2>Warum [Dein Coin Name]?</h2>
+            <ul>
+                <li>✅ Niedrige Transaktionsgebühren</li>
+                <li>✅ Schnelle Überweisungen</li>
+                <li>✅ Umweltfreundlich</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 [Dein Coin Name]. Alle Rechte vorbehalten.</p>
+    </footer>
+</body>
+</html>
