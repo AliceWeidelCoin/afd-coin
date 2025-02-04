@@ -31,7 +31,7 @@
             <a href="#" class="btn buy-now">Jetzt kaufen</a>
             <div class="marketcap">
                 <h3>Live Marketcap:</h3>
-                <p id="marketcap">Lade Daten...</p>
+                <p id="marketcap">88.000$</p> <!-- Statische Marketcap-Anzeige -->
             </div>
         </div>
     </section>
@@ -41,19 +41,19 @@
             <h2>Warum AfD-Coin?</h2>
             <div class="feature-grid">
                 <div class="feature">
-                    <i class="fas fa-coins"></i>
-                    <h3>✅ Niedrige Gebühren</h3>
-                    <p>Unsere Transaktionsgebühren sind die niedrigsten auf dem Markt.</p>
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h3>1% Transaktionsgebühren</h3>
+                    <p>1% aller Transaktionsgebühren fließen direkt in Wahlkampfunterstützung und Airdrops.</p>
                 </div>
                 <div class="feature">
-                    <i class="fas fa-bolt"></i>
-                    <h3>⚡ Schnelle Überweisungen</h3>
-                    <p>Transaktionen in Sekundenschnelle – weltweit.</p>
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Sicherheit & Transparenz</h3>
+                    <p>Dezentralisiert und transparent – für eine sichere Zukunft.</p>
                 </div>
                 <div class="feature">
-                    <i class="fas fa-leaf"></i>
-                    <h3>🌿 Umweltfreundlich</h3>
-                    <p>Wir nutzen energieeffiziente Technologien.</p>
+                    <i class="fas fa-users"></i>
+                    <h3>Gemeinschaft & Freiheit</h3>
+                    <p>Unterstützt von einer starken Gemeinschaft, die für Freiheit und Fortschritt steht.</p>
                 </div>
             </div>
         </div>
@@ -80,24 +80,5 @@
             <p>&copy; 2023 AfD-Coin. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
-
-    <script>
-        // API-Integration für die Live-Marketcap-Anzeige
-        async function fetchMarketCap() {
-            try {
-                const response = await fetch('https://api.coingecko.com/api/v3/coins/afd-coin'); // Ersetze "afd-coin" durch die tatsächliche Coin-ID
-                const data = await response.json();
-                const marketCap = data.market_data.market_cap.eur; // Marketcap in EUR
-                document.getElementById('marketcap').textContent = `€${marketCap.toLocaleString()}`;
-            } catch (error) {
-                console.error('Fehler beim Laden der Marketcap-Daten:', error);
-                document.getElementById('marketcap').textContent = 'Daten nicht verfügbar';
-            }
-        }
-
-        // Marketcap alle 60 Sekunden aktualisieren
-        fetchMarketCap();
-        setInterval(fetchMarketCap, 60000);
-    </script>
 </body>
 </html>

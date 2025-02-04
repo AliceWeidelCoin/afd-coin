@@ -81,6 +81,36 @@ nav ul li a {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    margin: 10px;
+}
+
+.hero .buy-now {
+    background-color: #28a745; /* Grüne Farbe für den "Buy Now" Button */
+    font-size: 20px;
+    padding: 15px 30px;
+}
+
+.hero .buy-now:hover {
+    background-color: #218838; /* Dunkleres Grün beim Hover */
+}
+
+.marketcap {
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.marketcap h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.marketcap p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
 }
 
 /* Features-Sektion */
@@ -228,4 +258,61 @@ nav ul li a {
 
 .contact h2 {
     text-align: center;
-    margin
+    margin-bottom: 40px;
+    font-size: 28px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%; /* Stellt sicher, dass die Felder die volle Breite einnehmen */
+    box-sizing: border-box; /* Verhindert, dass das Padding die Breite beeinflusst */
+}
+
+.contact textarea {
+    height: 150px; /* Höhe des Nachrichtenfelds anpassen */
+}
+
+.contact button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
