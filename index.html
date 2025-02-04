@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Afd-Coin - Die Zukunft der Kryptowährung</title>
+    <title>AfD-Coin - Die Zukunft der Kryptowährung</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -12,7 +12,7 @@
     <header>
         <div class="container">
             <a href="index.html" class="logo">
-                <h1>Afd-Coin</h1>
+                <h1>AfD-Coin</h1>
             </a>
             <nav>
                 <ul>
@@ -27,14 +27,18 @@
     <section class="hero">
         <div class="container">
             <h2>Die Zukunft der Kryptowährung</h2>
-            <p>Schnell, sicher und dezentralisiert – Afd-Coin revolutioniert die Blockchain-Technologie.</p>
-            <a href="about.html" class="btn">Mehr erfahren</a>
+            <p>Schnell, sicher und dezentralisiert – AfD-Coin revolutioniert die Blockchain-Technologie.</p>
+            <a href="#" class="btn buy-now">Jetzt kaufen</a>
+            <div class="marketcap">
+                <h3>Live Marketcap:</h3>
+                <p id="marketcap">Lade Daten...</p>
+            </div>
         </div>
     </section>
 
     <section class="features">
         <div class="container">
-            <h2>Warum Afd-Coin?</h2>
+            <h2>Warum AfD-Coin?</h2>
             <div class="feature-grid">
                 <div class="feature">
                     <i class="fas fa-coins"></i>
@@ -60,7 +64,7 @@
             <h2>Was unsere Nutzer sagen</h2>
             <div class="testimonial-grid">
                 <div class="testimonial">
-                    <p>"Afd-Coin hat mein Leben verändert! Endlich eine Kryptowährung, die wirklich funktioniert."</p>
+                    <p>"AfD-Coin hat mein Leben verändert! Endlich eine Kryptowährung, die wirklich funktioniert."</p>
                     <p class="author">– Max Mustermann</p>
                 </div>
                 <div class="testimonial">
@@ -73,8 +77,27 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 Afd-Coin. Alle Rechte vorbehalten.</p>
+            <p>&copy; 2023 AfD-Coin. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
+
+    <script>
+        // API-Integration für die Live-Marketcap-Anzeige
+        async function fetchMarketCap() {
+            try {
+                const response = await fetch('https://api.coingecko.com/api/v3/coins/afd-coin'); // Ersetze "afd-coin" durch die tatsächliche Coin-ID
+                const data = await response.json();
+                const marketCap = data.market_data.market_cap.eur; // Marketcap in EUR
+                document.getElementById('marketcap').textContent = `€${marketCap.toLocaleString()}`;
+            } catch (error) {
+                console.error('Fehler beim Laden der Marketcap-Daten:', error);
+                document.getElementById('marketcap').textContent = 'Daten nicht verfügbar';
+            }
+        }
+
+        // Marketcap alle 60 Sekunden aktualisieren
+        fetchMarketCap();
+        setInterval(fetchMarketCap, 60000);
+    </script>
 </body>
 </html>
